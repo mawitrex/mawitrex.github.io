@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Seguridad - Has participado en un ejercicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-icon {
+            background-color: #e0f2fe; /* light-blue-100 */
+            color: #0ea5e9; /* sky-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+
+    <div class="bg-white w-full max-w-4xl rounded-2xl shadow-lg overflow-hidden">
+        <!-- Encabezado -->
+        <div class="bg-blue-600 text-white p-6 sm:p-8 text-center">
+            <i class="fas fa-shield-alt fa-3x mb-4"></i>
+            <h1 class="text-3xl sm:text-4xl font-bold">Esto ha sido una simulación de seguridad</h1>
+            <p class="mt-2 text-lg text-blue-100">¡No te preocupes! Tus datos no han sido comprometidos. Este es un ejercicio de entrenamiento.</p>
+        </div>
+
+        <div class="p-6 sm:p-8 lg:p-10">
+            <!-- Sección de Explicación -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">¿Qué ha ocurrido?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Has hecho clic en un enlace y has introducido datos en una página que formaba parte de una campaña de phishing simulado, autorizada por nuestra organización. El objetivo es simple: ayudarnos a todos a reconocer y evitar ataques reales en el futuro. Tu participación es clave para fortalecer nuestra seguridad colectiva.
+                </p>
+            </div>
+
+            <!-- Sección de Señales de Alerta -->
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg mb-8">
+                <h3 class="text-xl font-bold text-yellow-800 mb-4 flex items-center">
+                    <i class="fas fa-exclamation-triangle mr-3"></i>
+                    Señales de alerta que podrías haber notado
+                </h3>
+                <ul class="list-disc list-inside text-yellow-700 space-y-2">
+                    <li><strong>Remitente sospechoso:</strong> ¿La dirección de correo del remitente era extraña o no coincidía exactamente con la oficial?</li>
+                    <li><strong>Sentido de urgencia:</strong> ¿El correo te presionaba para actuar de inmediato con amenazas o promesas increíbles?</li>
+                    <li><strong>Errores y tono inusual:</strong> ¿Notaste faltas de ortografía, gramática extraña o un tono que no correspondía al de la institución?</li>
+                    <li><strong>Enlaces engañosos:</strong> Si hubieras pasado el ratón sobre el enlace (sin hacer clic), la URL real que aparecía no coincidía con el destino esperado.</li>
+                </ul>
+            </div>
+
+            <!-- Sección de Buenas Prácticas -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Construyamos un cortafuegos humano: Tus próximos pasos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Tarjeta 1: Piensa -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="card-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-think-fast fa-2x"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-gray-900">1. Piensa antes de hacer clic</h4>
+                        <p class="text-gray-600 mt-2 text-sm">Tómate un segundo. La urgencia es la principal herramienta de un atacante. Desconfía de cualquier mensaje que te presione.</p>
+                    </div>
+                    <!-- Tarjeta 2: Verifica -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="card-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-shield fa-2x"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-gray-900">2. Verifica al remitente</h4>
+                        <p class="text-gray-600 mt-2 text-sm">Inspecciona siempre la dirección de correo completa. No confíes solo en el nombre que se muestra.</p>
+                    </div>
+                    <!-- Tarjeta 3: Reporta -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="card-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-flag fa-2x"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-gray-900">3. Si dudas, reporta</h4>
+                        <p class="text-gray-600 mt-2 text-sm">Es mejor ser precavido. Usa los canales oficiales para reportar cualquier correo sospechoso al equipo de TI.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de cierre -->
+            <div class="text-center mt-10">
+                <button onclick="window.close()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
+                    Entendido, cerrar esta ventana
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
