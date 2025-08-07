@@ -1,2 +1,0 @@
-# mawitrex.github.io
-Concientizacion
