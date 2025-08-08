@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Banco (Maqueta Visual)</title>
+    <title>BCI (Maqueta Visual)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
+        /* --- COLORES CORPORATIVOS BCI --- */
+        :root {
+            --bci-azul: #003057;
+            --bci-naranja: #F58220;
+            --bci-azul-hover: #00467F;
+            --fondo-gris: #f5f6fa;
+        }
+
         /* --- Estilos Globales --- */
         body {
             margin: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f5f6fa;
+            background-color: var(--fondo-gris);
             color: #333;
         }
         .container {
@@ -28,9 +36,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #FF5F00; /* Naranja corporativo */
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--bci-naranja);
+            text-transform: lowercase; /* Estilo del logo bci */
         }
         /* --- Formulario de Login en el Header --- */
         #login-form {
@@ -44,7 +53,7 @@
             border-radius: 4px;
         }
         #login-form .btn {
-            background-color: #002D56; /* Azul corporativo */
+            background-color: var(--bci-azul);
             color: white;
             padding: 8px 15px;
             border: none;
@@ -54,11 +63,11 @@
             transition: background-color 0.3s;
         }
         #login-form .btn:hover {
-            background-color: #00427e;
+            background-color: var(--bci-azul-hover);
         }
         /* --- Sección Principal (Hero) --- */
         .hero {
-            background: linear-gradient(rgba(0, 45, 86, 0.7), rgba(0, 45, 86, 0.7)), url('https://via.placeholder.com/1500x450/cccccc/808080?text=Imagen+Corporativa') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 48, 87, 0.7), rgba(0, 48, 87, 0.7)), url('https://via.placeholder.com/1500x450/cccccc/808080?text=Imagen+Corporativa+BCI') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -90,21 +99,21 @@
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            color: #002D56;
+            color: var(--bci-azul);
             font-weight: bold;
             min-width: 80px;
         }
-        .access-item .icon { font-size: 2em; color: #FF5F00; margin-bottom: 10px; }
+        .access-item .icon { font-size: 2em; color: var(--bci-naranja); margin-bottom: 10px; }
         /* --- Sección de Productos --- */
         .products { padding: 80px 20px; text-align: center; }
-        .products h2 { font-size: 2.2em; color: #002D56; margin-bottom: 40px; }
+        .products h2 { font-size: 2.2em; color: var(--bci-azul); margin-bottom: 40px; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .product-card { background: #fff; border-radius: 8px; padding: 25px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s; }
         .product-card:hover { transform: translateY(-5px); }
-        .product-card i { font-size: 1.5em; color: #FF5F00; margin-bottom: 15px; }
-        .product-card h3 { margin: 0 0 10px 0; color: #002D56; }
+        .product-card i { font-size: 1.5em; color: var(--bci-naranja); margin-bottom: 15px; }
+        .product-card h3 { margin: 0 0 10px 0; color: var(--bci-azul); }
         /* --- Pie de Página (Footer) --- */
-        footer { background-color: #002D56; color: #ccc; padding: 40px 20px; }
+        footer { background-color: var(--bci-azul); color: #ccc; padding: 40px 20px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .footer-col h4 { color: white; margin-bottom: 15px; }
         .footer-col a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
@@ -114,18 +123,18 @@
 <body>
 
     <header class="container">
-        <div class="logo">MiBanco</div>
+        <div class="logo">bci</div>
         
         <form id="login-form" action="#" method="POST">
-            <input type="text" name="usuario" placeholder="Usuario" required>
-            <input type="password" name="clave" placeholder="Contraseña" required>
+            <input type="text" name="rut" placeholder="RUT" required>
+            <input type="password" name="clave" placeholder="Clave Internet" required>
             <button type="submit" class="btn">Ingresar</button>
         </form>
     </header>
 
     <section class="hero">
-        <h1>Tu Futuro, Nuestras Soluciones</h1>
-        <p>Maneja tus finanzas de forma simple y segura, donde sea que estés.</p>
+        <h1>Seamos diferentes</h1>
+        <p>Soluciones financieras para apoyarte en cada uno de tus proyectos.</p>
     </section>
 
     <section class="quick-access">
@@ -137,22 +146,22 @@
 
     <main class="container">
         <section class="products">
-            <h2>Descubre nuestros productos</h2>
+            <h2>Nuestros Productos Destacados</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <i class="fas fa-wallet"></i>
-                    <h3>Cuentas Digitales</h3>
-                    <p>Maneja tu dinero día a día con nuestras cuentas flexibles y de bajo costo.</p>
+                    <h3>Cuenta Corriente Digital</h3>
+                    <p>Abre tu cuenta 100% online y maneja tu dinero sin ir a una sucursal.</p>
                 </div>
                 <div class="product-card">
                     <i class="fas fa-credit-card"></i>
                     <h3>Tarjetas de Crédito</h3>
-                    <p>Acumula puntos, accede a beneficios exclusivos y compra con seguridad.</p>
+                    <p>Acumula puntos, accede a beneficios y descuentos exclusivos en comercios asociados.</p>
                 </div>
                 <div class="product-card">
                     <i class="fas fa-home"></i>
-                    <h3>Créditos Hipotecarios</h3>
-                    <p>El impulso que necesitas para cumplir el sueño de la casa propia con tasas preferenciales.</p>
+                    <h3>Crédito Hipotecario</h3>
+                    <p>Te acompañamos en cada paso para que cumplas el sueño de tu casa propia.</p>
                 </div>
             </div>
         </section>
@@ -160,20 +169,17 @@
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-col"><h4>Sobre Nosotros</h4><a href="#">¿Quiénes somos?</a><a href="#">Prensa</a></div>
-            <div class="footer-col"><h4>Ayuda</h4><a href="#">Preguntas Frecuentes</a><a href="#">Contacto</a><a href="#">Seguridad</a></div>
-            <div class="footer-col"><h4>Legal</h4><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Tasas</a></div>
-            <div class="footer-col"><h4>Síguenos</h4><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
+            <div class="footer-col"><h4>BCI</h4><a href="#">Sobre BCI</a><a href="#">Trabaja con nosotros</a></div>
+            <div class="footer-col"><h4>Ayuda</h4><a href="#">Preguntas Frecuentes</a><a href="#">Contacto</a><a href="#">Emergencias</a></div>
+            <div class="footer-col"><h4>Información</h4><a href="#">Condiciones</a><a href="#">Privacidad y Seguridad</a><a href="#">Tasas y Tarifas</a></div>
+            <div class="footer-col"><h4>Redes Sociales</h4><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2025 MiBanco. Maqueta con fines educativos.</p></div>
+        <div class="footer-bottom"><p>&copy; 2025 BCI. Maqueta con fines educativos.</p></div>
     </footer>
 
     <script>
         document.getElementById('login-form').addEventListener('submit', function(event) {
-            // Previene que el formulario se envíe a cualquier lado.
             event.preventDefault(); 
-            
-            // Muestra una alerta explicando que es una demostración.
             alert('🛡️ ¡Acción detenida! Este es un formulario de demostración y no es funcional. En un sitio real, tus datos se enviarían a un servidor. ¡Siempre verifica la URL antes de ingresar tus credenciales!');
         });
     </script>
