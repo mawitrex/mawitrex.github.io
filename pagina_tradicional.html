@@ -3,177 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre - Portafolio</title>
+    <title>Tu Banco (Maqueta Visual)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-        /* --- Estilos Generales --- */
+        /* --- Estilos Globales --- */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f6fa;
             color: #333;
-            line-height: 1.6;
         }
-
-        /* --- Contenedor Principal --- */
         .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
-        /* --- Encabezado y Navegación --- */
+        /* --- Encabezado Principal (Header) --- */
         header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #7f8c8d;
-        }
-
-        /* --- Secciones --- */
-        .section {
-            margin-top: 30px;
-        }
-
-        .section h2 {
-            font-size: 1.8em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            color: #2980b9;
-        }
-
-        /* --- Proyectos --- */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background: #ecf0f1;
+            background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            color: #34495e;
-        }
-
-        /* --- Formulario de Contacto --- */
-        #contact-form {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-
-        #contact-form input, #contact-form textarea {
-            padding: 12px;
-            margin-bottom: 15px;
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #FF5F00; /* Naranja corporativo */
+        }
+        /* --- Formulario de Login en el Header --- */
+        #login-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #login-form input {
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 1em;
         }
-
-        #contact-form button {
-            background-color: #3498db;
+        #login-form .btn {
+            background-color: #002D56; /* Azul corporativo */
             color: white;
-            padding: 12px;
+            padding: 8px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1.1em;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
-
-        #contact-form button:hover {
-            background-color: #2980b9;
+        #login-form .btn:hover {
+            background-color: #00427e;
         }
-        
-        /* --- Pie de Página --- */
-        footer {
+        /* --- Sección Principal (Hero) --- */
+        .hero {
+            background: linear-gradient(rgba(0, 45, 86, 0.7), rgba(0, 45, 86, 0.7)), url('https://via.placeholder.com/1500x450/cccccc/808080?text=Imagen+Corporativa') no-repeat center center/cover;
+            color: white;
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #95a5a6;
+            padding: 100px 20px;
         }
-
+        .hero h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        /* --- Sección de Accesos Rápidos --- */
+        .quick-access {
+            background: #fff;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .access-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #002D56;
+            font-weight: bold;
+            min-width: 80px;
+        }
+        .access-item .icon { font-size: 2em; color: #FF5F00; margin-bottom: 10px; }
+        /* --- Sección de Productos --- */
+        .products { padding: 80px 20px; text-align: center; }
+        .products h2 { font-size: 2.2em; color: #002D56; margin-bottom: 40px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .product-card { background: #fff; border-radius: 8px; padding: 25px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card i { font-size: 1.5em; color: #FF5F00; margin-bottom: 15px; }
+        .product-card h3 { margin: 0 0 10px 0; color: #002D56; }
+        /* --- Pie de Página (Footer) --- */
+        footer { background-color: #002D56; color: #ccc; padding: 40px 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .footer-col h4 { color: white; margin-bottom: 15px; }
+        .footer-col a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #3d5875; }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header class="container">
+        <div class="logo">MiBanco</div>
+        
+        <form id="login-form" action="#" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Ingresar</button>
+        </form>
+    </header>
 
-        <header>
-            <h1>[Tu Nombre Completo]</h1>
-            <p>[Tu Profesión o Especialidad | Ejemplo: Desarrollador Web Full-Stack]</p>
-        </header>
+    <section class="hero">
+        <h1>Tu Futuro, Nuestras Soluciones</h1>
+        <p>Maneja tus finanzas de forma simple y segura, donde sea que estés.</p>
+    </section>
 
-        <main>
-            <section id="about" class="section">
-                <h2>Sobre Mí</h2>
-                <p>
-                    Aquí puedes escribir una breve introducción sobre ti. Habla de tu pasión por la tecnología, 
-                    tus intereses profesionales y lo que te motiva. Menciona las tecnologías clave con las que
-                    disfrutas trabajar.
-                </p>
-            </section>
+    <section class="quick-access">
+        <a href="#" class="access-item"><div class="icon"><i class="fas fa-exchange-alt"></i></div><span>Transferir</span></a>
+        <a href="#" class="access-item"><div class="icon"><i class="fas fa-file-invoice-dollar"></i></div><span>Pagar</span></a>
+        <a href="#" class="access-item"><div class="icon"><i class="fas fa-hand-holding-usd"></i></div><span>Créditos</span></a>
+        <a href="#" class="access-item"><div class="icon"><i class="fas fa-chart-line"></i></div><span>Invertir</span></a>
+    </section>
 
-            <section id="projects" class="section">
-                <h2>Mis Proyectos</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Proyecto Uno</h3>
-                        <p>Descripción breve del proyecto. Explica el propósito, la tecnología utilizada y tu rol en él. Por ejemplo: "Un e-commerce desarrollado con React y Node.js para una tienda local".</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Proyecto Dos</h3>
-                        <p>Descripción breve del proyecto. Explica el propósito, la tecnología utilizada y tu rol en él. Por ejemplo: "Una aplicación móvil para gestión de tareas hecha con Flutter".</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Proyecto Tres</h3>
-                        <p>Descripción breve del proyecto. Explica el propósito, la tecnología utilizada y tu rol en él. Por ejemplo: "Un blog personal construido con Astro y desplegado en la nube".</p>
-                    </div>
+    <main class="container">
+        <section class="products">
+            <h2>Descubre nuestros productos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Cuentas Digitales</h3>
+                    <p>Maneja tu dinero día a día con nuestras cuentas flexibles y de bajo costo.</p>
                 </div>
-            </section>
+                <div class="product-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Tarjetas de Crédito</h3>
+                    <p>Acumula puntos, accede a beneficios exclusivos y compra con seguridad.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Créditos Hipotecarios</h3>
+                    <p>El impulso que necesitas para cumplir el sueño de la casa propia con tasas preferenciales.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            <section id="contact" class="section">
-                <h2>Contacto</h2>
-                <p>¿Interesado en colaborar? ¡Envíame un mensaje!</p>
-                <form id="contact-form" action="https://formspree.io/f/TU_IDENTIFICADOR_DE_FORMULARIO" method="POST">
-                    <input type="text" name="name" placeholder="Tu Nombre" required>
-                    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-                    <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
-            </section>
-        </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Sobre Nosotros</h4><a href="#">¿Quiénes somos?</a><a href="#">Prensa</a></div>
+            <div class="footer-col"><h4>Ayuda</h4><a href="#">Preguntas Frecuentes</a><a href="#">Contacto</a><a href="#">Seguridad</a></div>
+            <div class="footer-col"><h4>Legal</h4><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Tasas</a></div>
+            <div class="footer-col"><h4>Síguenos</h4><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 MiBanco. Maqueta con fines educativos.</p></div>
+    </footer>
 
-        <footer>
-            <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-            </footer>
-
-    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            // Previene que el formulario se envíe a cualquier lado.
+            event.preventDefault(); 
+            
+            // Muestra una alerta explicando que es una demostración.
+            alert('🛡️ ¡Acción detenida! Este es un formulario de demostración y no es funcional. En un sitio real, tus datos se enviarían a un servidor. ¡Siempre verifica la URL antes de ingresar tus credenciales!');
+        });
+    </script>
 
 </body>
 </html>
